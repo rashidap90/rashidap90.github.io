@@ -16,6 +16,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			var loadDeferredStyles = function() {
+			  var addStylesNode = document.getElementById("deferred-styles");
+			  var replacement = document.createElement("div");
+			  replacement.innerHTML = addStylesNode.textContent;
+			  document.body.appendChild(replacement)
+			  addStylesNode.parentElement.removeChild(addStylesNode);
+			};
+			var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+				webkitRequestAnimationFrame || msRequestAnimationFrame;
+			if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+			else window.addEventListener('load', loadDeferredStyles);
+		  </script>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92258636-3"></script>
 <script>
@@ -74,10 +87,9 @@
 								<h2 class="major">Professional Skills</h2>
 									<li>Project Management</li>
 									<li>Monitoring and evaluation</li>
-									<li>Leadership and Training skills</li>
-									<li>Advocacy skills </li>
-									<li>Negotiation Skills</li>
-									<li>Interpersonal liaison and problem-solving skills </li>
+									<li>Leadership and Training</li>
+									<li>Advocacy and Negotiation</li>
+									<li>Interpersonal liaison and problem-solving</li>
 									<li>Ability to work in multi- cultural environment.</li>
 									
 							</div>
